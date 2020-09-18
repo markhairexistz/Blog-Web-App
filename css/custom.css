@@ -1,0 +1,280 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: 0;
+}
+body{
+	
+	
+	
+}
+
+.title-container{
+	background:linear-gradient(to top,black,transparent); 
+	border-bottom: 2px solid white;
+	width: 100vw;
+	height: 10vh;
+	/*margin: 10vh auto;*/
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.title{
+	font-family: Raleway;
+	font-size: 2rem;
+	color:white;
+}
+.container{
+	width: 90vw;
+	height:45vh;
+	margin:2vh auto;
+
+	border-radius: 3px;
+	background:linear-gradient(to bottom,#90e5c6,transparent,#90e5c6);
+	position: relative;
+	overflow:hidden;
+}
+.slider{
+	width:360vw;
+	height:95%;
+	display: flex;
+	transition:all 1s ease; 
+	position: relative;
+	
+
+
+}
+
+.slider div{
+	background-color: white;
+	width:8%;
+	margin:5px;
+
+	padding: 3px;
+	transition:all 1s ease;
+
+}
+.slider div img{
+	height: 80%;
+	width: 100%;
+
+	object-fit: cover;
+	object-position: middle;
+}
+.slider div .header{
+	font-family: Raleway;
+	font-size: 0.9rem;
+	font-weight: bold;
+}
+.slider div p{
+	font-family: Raleway;
+	font-size: 0.8rem;
+}
+
+	
+
+/*hover of select in slider*/
+.featured-blog:hover{
+	width: 10%;
+	height: 102%;
+	
+}
+
+.control .arrow{
+	position: absolute;
+	top:50%;
+
+	cursor:pointer;
+}
+
+.control .arrow.left{
+	
+	left:3%;
+}
+
+.left-icon:hover{
+	color:skyblue;
+}
+
+.control .arrow.right{
+	
+	left:95%;
+}
+
+
+
+.right-icon:hover{
+	color:skyblue;
+}
+.control ul{
+position: absolute;
+left:50%;
+bottom: 0;
+list-style: none;
+display: flex;
+}
+.control ul li{
+	border:1px solid black;
+	border-radius: 50px;
+	width:0.7rem;
+	height:0.7rem;
+	background-color: #90e5c6;
+	margin:0.2em;
+	transition:all 0.5s ease;
+}
+.control ul .selected{
+	background-color: white;
+}
+
+.control ul li:hover{
+	background-color: white;
+}
+
+ /* The Modal pcpart checker (background) */
+.blogModal {
+   display: none; /* Hidden by default */
+  position:fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  /*overflow: auto;  Enable scroll if needed */
+  background-color:rgba(192,192,192,0.6);
+  top: 0;
+  justify-content: center;
+
+}
+.blogModal.show{
+	display: grid;
+}
+
+/**/
+
+/* Modal Content/Box */
+.blog-modal {
+ 	font-family: Raleway;
+ 	color:black;
+ 	background-color:white;
+ 	overflow: scroll;
+
+ 	width:80vw;
+ 	height: 95%;
+    margin-top:0%;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 20px;
+
+    border: 1px solid black;
+    border-radius: 6px;
+
+    display: grid;
+    grid-template-rows: 20px 30% 1fr;
+}
+.blog-modal .header{
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+.blog-modal .blog-header{
+	font-size: 1.5rem;
+}
+.blog-modal .content{
+
+}
+
+.blogImg{
+	width:90%;
+	height:16rem;
+	object-fit: cover;
+	object-position: middle;
+
+	transition:all 0.5s ease;
+}
+.blogImg:hover{
+	width:100%;
+	height:20rem;
+	object-fit: cover;
+	object-position: middle;
+}
+/* The Close Button */
+.img-container{
+	grid-column: 1/2;
+	display: flex;
+	justify-content: center;
+
+}
+
+.x{
+	grid-row: 1/2;
+	display: grid;
+	justify-items: right;
+	align-items: top;
+
+}
+.headlines{
+	align-items: center;
+	padding-left: 5px;
+	grid-row: 2/3;
+}
+.xblog-modal-container{
+	display: grid;
+	justify-content: end;
+}
+.xblog-modal {
+  color: black;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: -15px; 
+}
+.headline-container{
+	grid-column: 2/3;
+	background-color:;
+
+	display: flex;
+	justify-content:start;
+	align-items: end;
+}
+
+
+.xblog-modal:hover,
+.xblog-modal:focus {
+  color: orange;
+
+  text-decoration: none;
+  cursor: pointer;
+} 
+.content-preloader{
+	display: none;
+	z-index: 9999;
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	left:50%;
+	top:50%;
+}
+.content-preloader.show{
+	display: block;
+}
+.footer{
+	display: grid;
+	background-color:rgba(0, 0, 0, 0.8);
+	border-top:1px solid white;
+	font-family: Raleway;
+	font-size: 1rem;
+
+	height:30vh;
+	width: 100vw;
+	color:white;
+	position: fixed;
+  	left: 0;
+ 	bottom: 0;
+ 	padding:30px;
+}
+.footer  p a{
+list-style: none;
+text-decoration: none;
+color:white;
+}

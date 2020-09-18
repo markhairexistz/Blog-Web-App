@@ -1,0 +1,158 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: 0;
+}
+.header{
+	width: 100vw;
+	height: 5vh;
+	border-bottom: 2px solid black;
+
+	display: flex;
+	justify-content: end;
+	align-items: center;
+}
+.header p a{
+	font-size: 1rem;
+	font-family: Raleway;
+	color:black;
+	text-decoration: none;
+	cursor: pointer;
+}
+.header i{
+	margin-left: 10px;
+}
+
+.header .logout a:hover{
+	color: orange;
+}
+.container{
+	width:100vw;
+	height: 100vh;
+
+	display: grid;
+	grid-template-columns: 20vw 1fr 20vw;
+}
+.form-container{
+	grid-column: 2/3;
+	/*background:linear-gradient(120deg , skyblue, transparent);*/
+		padding: 5px;
+		text-align: center;
+	display: grid;
+	align-items: center;
+}
+.form-container .title{
+	font-family: Raleway;
+	font-weight: bold;
+	color:black;
+}
+.form-container .upload-img{
+	position: absolute;
+	display: none;
+}
+.form-container .choose-file{
+	font-family: Raleway;
+	color:black;
+	width: 60%;
+	height: 2rem;
+	border:2px solid black;
+	border-radius: 5px;
+	background-color:transparent;
+
+	transition: all 0.5s ease;
+	cursor:pointer;
+}
+.form-container .choose-file:hover{
+	background-color: white;
+	width: 62%;
+}
+
+.form-container .file-name{
+	font-family: Raleway;
+	font-size: 0.8rem;
+	width: 40rem;
+
+	margin-top:0.5rem;
+}
+.imgDiv .imgToUpload{
+	width: 30%;
+	height: 150px;
+	object-fit: cover;
+	object-position: middle;
+
+	transition:all 1s ease;
+}
+.imgDiv .imgToUpload:hover{
+	width: 60%;
+	height: 300px;
+}
+
+.form-container .blog-header{
+	width: 60%;
+	font-family: Raleway;
+	text-align: center;
+	color:black;
+	width: 60%;
+	height: 2rem;
+	border:2px solid black;
+	border-radius: 5px;
+	
+
+	margin-top:0.5rem;
+}
+.form-container .blog-author{
+	width: 60%;
+	font-family: Raleway;
+	text-align: center;
+	color:black;
+	width: 60%;
+	height: 2rem;
+	border:2px solid black;
+	border-radius: 5px;
+	
+
+	margin-top:0.5rem;
+}
+.form-container {
+	font-family: Raleway;
+	color:black;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.form-container .blog-content{
+	width: 60%;
+	font-family: Raleway;
+	text-align: center;
+	color:black;
+	width: 60%;
+	height:200px;
+	border:2px solid black;
+	border-radius: 5px;
+
+	margin-top:0.5rem;
+}
+
+.form-container .publish{
+	font-family: Raleway;
+	font-weight: bold;
+	font-size: 1rem;
+	color:black;
+	width: 60%;
+	height: 3rem;
+	border:2px solid black;
+	border-radius: 5px;
+	background-color: transparent;
+
+	transition: all 0.5s ease;
+
+	margin-top:0.5rem;
+	transition:all 0.5s ease;
+
+	cursor:pointer;
+}
+.form-container .publish:hover{
+	background-color: white;
+	width:63%;
+}
+
