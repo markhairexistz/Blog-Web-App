@@ -36,6 +36,7 @@
 		
 	?>
 	<p class="admin"><a href=""><i class="fa fa-lg fa-user-secret" aria-hidden="true"></i><?php echo $user_name;?></a></p>
+	<p class="setting"><a href=""><i class="fa fa-lg fa-cog"></i> Account</a></p>
 	<p class="logout"><a class="nav-link" href = "functions/logout.php"><i class="fa fa-lg fa-sign-out" aria-hidden="true"></i>Logout</a>&nbsp;&nbsp;&nbsp;</p>
 </div>
 <div class="form-container">
@@ -68,6 +69,12 @@
 	</form>
 	
 </div>
+</div>
+<!--update user modal-->
+<div class="modal-signup">
+	<div class="preloader">
+		<img src="img/preloader.gif">
+	</div>
 </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
