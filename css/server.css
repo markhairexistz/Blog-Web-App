@@ -13,7 +13,7 @@
 	align-items: center;
 }
 .header p a{
-	font-size: 1rem;
+	font-size: 0.8rem;
 	font-family: Raleway;
 	color:black;
 	text-decoration: none;
@@ -22,7 +22,9 @@
 .header i{
 	margin-left: 10px;
 }
-
+.header .setting a:hover{
+	color:orange;
+}
 .header .logout a:hover{
 	color: orange;
 }
@@ -156,3 +158,85 @@
 	width:63%;
 }
 
+/*Modal*/
+.modal-signup{
+	width: 100vw;
+	height: 100vh;
+	background-color:rgba(0,0,0,0.5);
+	position: absolute;
+	display: none;
+	justify-content: center;
+	top:0;
+	left:0;
+}
+.modal-signup.show{
+	display: grid;
+}
+.modal-container{
+	width: 35vw;
+	height: 60vh;
+	background-color: white;
+	border-radius: 2px;
+	padding: 10px;
+	margin-top:10%;
+
+
+}
+.modal-container span{
+	float:right;
+	cursor: pointer;
+	font-size: 1.5rem;
+}
+.modal-container span:hover{
+	color:red;
+}
+.modal-container input{
+	width: 100%;
+	height: 2rem;
+	font-family: Raleway;
+	font-size:0.8rem;
+	margin-top:0.5rem;
+	
+}
+.modal-container p{
+	font-family: Raleway;
+	font-size:0.8rem;
+	margin-top:0.5rem;
+	
+}
+.modal-container button{
+	width: 100%;
+	height: 2rem;
+	font-family: Raleway;
+	font-size:0.8rem;
+	margin-top: 1rem;
+}
+.modal-container .setting {
+	font-family: Raleway;
+	font-size: 1.2rem;
+	color:black;
+	text-decoration: none;
+}
+.modal-container .accSettingMessage{
+	font-size: 0.8rem;
+	color:green;
+	font-family: Raleway;
+
+}
+.preloader{
+	background-color: transparent;
+
+	width: 100vw;
+	height: 100vh;
+
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+.preloader.show{
+	display: grid;
+}
+.preloader img{
+	width: 5rem;
+	height: 5rem;
+}
