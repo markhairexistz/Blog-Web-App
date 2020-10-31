@@ -47,6 +47,94 @@ fileReader.onload = () =>{
  	//fileReader.readAsText(input.files[0]);
 }
 
+//modal account setting
+const modalSignup = document.querySelector('.modal-signup');
+
+const setting = document.querySelector('.setting');
+
+const preloader = document.querySelector('.preloader');
+setting.addEventListener('click', showAccSetting);
+
+function showAccSetting(e){
+	e.preventDefault();
+	modalSignup.classList.add('show');
+
+let xhr = new XMLHttpRequest();
+xhr.open("GET", "functions/serverData.php");
+xhr.onreadystatechange = function(){
+	if(xhr.readyState == 4 && xhr.status == 200){
+ 		if(xhr.responseText == "success"){
+ 			preloader.classList.add('show');
+ 		}else{
+ 			//preloader.classList.remove("show");
+ 			//publish.innerHTML = xhr.responseText;
+ 			//btnSend.disabled = true;
+ 			//console.log(xhr.responseText);
+ 			modalSignup.innerHTML = xhr.responseText;//put html valuesto modal container
+ 			
+ 		//exit account setting
+ 		const xsignupModal = document.querySelector('.xsignupModal');
+ 		xsignupModal.addEventListener('click', xshowAccSetting);
+			function xshowAccSetting(){
+				modalSignup.classList.remove('show');
+			}
+
+			//modal inputs
+			const message = document.querySelector('.accSettingMessage');
+			const name = document.querySelector('.name');
+			const userName = document.querySelector('.userName');
+			const oldPassword = document.querySelector('.oldPassword');
+			const newPassword = document.querySelector('.newPassword');
+			const updateBtn = document.querySelector('.updateBtn');
+
+			updateBtn.addEventListener('click', updateServerData);
+
+			function updateServerData(){
+				
+				let formdata = new FormData();
+
+				formdata.append("name", name.value);
+				formdata.append("userName", userName.value);
+				formdata.append("oldPassword", oldPassword.value);
+				formdata.append("newPassword", newPassword.value);
+
+ 				let xhr = new XMLHttpRequest();
+
+ 				xhr.open("POST", "functions/updateServerData.php");
+
+ 				xhr.onreadystatechange = function(){
+ 					if(xhr.readyState == 4 && xhr.status == 200){
+ 						if(xhr.responseText == "success"){
+ 							updateBtn.disabled = true;
+ 							//loader
+ 							updateBtn.innerHTML = 'Updating...';
+ 						}else{
+ 						//preloader.classList.remove("show");
+ 						//publish.innerHTML = xhr.responseText;
+ 						//btnSend.disabled = true;
+ 						message.innerHTML = xhr.responseText;
+ 						//updateBtn.innerHTML = xhr.responseText;
+ 						updateBtn.disabled = false;
+ 						/*
+ 						setTimeout(()=>{
+ 						publish.innerHTML = '<i class="fa fa-lg fa-newspaper-o" aria-hidden="true"></i> PUBLISH';
+ 						publish.disabled = false;
+ 						},3000)
+ 						*/
+ 					}
+ 				}
+			 }
+ 				xhr.send(formdata);
+			}
+
+ 		}
+ 	}
+ }
+ xhr.send();
+
+}
+
+
 //ajax
 //insert
 /*
